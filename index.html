@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TURCO | 跨境食品貿易與供應解決方案</title>
+<meta name="description" content="TURCO 是一家總部位於台灣的跨境食品貿易公司，專注於進出口貿易與供應解決方案。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Serif+TC:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+/* ════════════════════════════════════════════════════════
+   BASE
+════════════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#080808;
+  color:#f0ebe2;
+  font-family:'DM Sans','Noto Sans TC',sans-serif;
+  font-weight:300;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+
+:root{
+  --ink:#080808;
+  --ink-2:#101010;
+  --ink-3:#181818;
+  --ink-4:#222;
+  --cream:#f5f0e8;
+  --cream-2:#ede7dc;
+  --cream-3:#e4ddd2;
+  --gold:#c4973a;
+  --gold-2:#d4a84a;
+  --gold-pale:rgba(196,151,58,.12);
+  --spice:#8b2e2e;
+  --jade:#1a4a32;
+  --w100:#fff;
+  --w70:rgba(255,255,255,.7);
+  --w50:rgba(255,255,255,.5);
+  --w30:rgba(255,255,255,.3);
+  --w12:rgba(255,255,255,.12);
+  --w06:rgba(255,255,255,.06);
+  --fd:'Cormorant Garamond','Noto Serif TC',serif;
+  --fb:'DM Sans','Noto Sans TC',sans-serif;
+  --e1:cubic-bezier(.16,1,.3,1);
+  --e2:cubic-bezier(.76,0,.24,1);
+}
+
+/* lang */
+[data-lang="en"] .zh{display:none!important}
+[data-lang="zh"] .en{display:none!important}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .85s var(--e1),transform .85s var(--e1)}
+.rv.on{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+.rv.d4{transition-delay:.4s}.rv.d5{transition-delay:.5s}.rv.d6{transition-delay:.6s}
+
+/* shared label */
+.lbl{
+  display:flex;align-items:center;gap:.9rem;
+  font-family:var(--fb);font-size:.6rem;font-weight:400;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
+  margin-bottom:1.2rem;
+}
+.lbl::before{content:'';width:28px;height:1px;background:var(--gold);flex-shrink:0}
+
+/* shared section title */
+.stitle{
+  font-family:var(--fd);
+  font-size:clamp(2.2rem,4vw,3.6rem);
+  font-weight:400;line-height:1.15;
+}
+.stitle em{font-style:italic;color:var(--gold)}
+
+/* section pad */
+.sp{padding:7rem 6rem}
+@media(max-width:900px){.sp{padding:4rem 1.8rem}}
+
+/* gold rule */
+.grule{width:40px;height:1px;background:var(--gold);margin:1.4rem 0}
+.grule.center{margin:1.4rem auto}
+
+
+/* ════════════════════════════════════════════════════════
+   NAV
+════════════════════════════════════════════════════════ */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:900;
+  display:flex;align-items:center;justify-content:space-between;
+  height:76px;padding:0 3rem;
+  transition:all .5s var(--e1);
+}
+#nav.scrolled{
+  background:rgba(8,8,8,.94);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border-bottom:1px solid rgba(196,151,58,.15);
+  height:64px;
+}
+.nav-logo{
+  font-family:var(--fd);font-size:1.55rem;font-weight:500;
+  letter-spacing:.22em;color:var(--gold);text-transform:uppercase;
+}
+.nav-links{display:flex;gap:2.4rem;list-style:none}
+.nav-links a{
+  font-size:.68rem;font-weight:400;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--w50);
+  position:relative;transition:color .3s;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;
+  width:0;height:1px;background:var(--gold);
+  transition:width .35s var(--e1);
+}
+.nav-links a:hover{color:var(--w100)}
+.nav-links a:hover::after{width:100%}
+.nav-r{display:flex;align-items:center;gap:1rem}
+.nav-cta{
+  font-size:.65rem;font-weight:400;letter-spacing:.14em;
+  text-transform:uppercase;padding:.55rem 1.5rem;
+  background:var(--gold);color:var(--ink);
+  border:1px solid var(--gold);
+  transition:background .3s,color .3s;
+}
+.nav-cta:hover{background:transparent;color:var(--gold)}
+.ltoggle{
+  display:flex;border:1px solid rgba(196,151,58,.35);overflow:hidden;
+}
+.ltoggle button{
+  font-family:var(--fb);font-size:.62rem;font-weight:400;
+  letter-spacing:.1em;padding:.4rem .9rem;
+  background:transparent;color:var(--w50);
+  border:none;cursor:pointer;transition:all .25s;
+}
+.ltoggle button.on{background:var(--gold);color:var(--ink)}
+.ltoggle button:not(.on):hover{color:var(--w100)}
+
+
+/* ════════════════════════════════════════════════════════
+   HERO
+════════════════════════════════════════════════════════ */
+#hero{
+  position:relative;height:100vh;min-height:720px;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background:url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=2000&q=90') center/cover no-repeat;
+  transform:scale(1.07);
+  animation:kbz 20s ease-out forwards;
+}
+@keyframes kbz{to{transform:scale(1)}}
+
+/* Strong multi-layer overlay for readability */
+.hero-ov{
+  position:absolute;inset:0;z-index:1;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(8,8,8,.35) 0%, transparent 100%),
+    linear-gradient(to bottom,
+      rgba(8,8,8,.72) 0%,
+      rgba(8,8,8,.42) 35%,
+      rgba(8,8,8,.55) 65%,
+      rgba(8,8,8,.88) 100%
+    );
+}
+/* Warm amber color tint */
+.hero-tint{
+  position:absolute;inset:0;z-index:2;
+  background:radial-gradient(ellipse 100% 80% at 50% 100%, rgba(140,60,0,.18) 0%, transparent 60%);
+}
+
+.hero-body{
+  position:relative;z-index:10;
+  text-align:center;
+  display:flex;flex-direction:column;align-items:center;
+  max-width:860px;width:100%;padding:0 2rem;
+}
+
+/* Eyebrow */
+.h-eye{
+  font-family:var(--fb);font-size:.6rem;font-weight:400;
+  letter-spacing:.32em;text-transform:uppercase;color:var(--gold);
+  margin-bottom:1.8rem;
+  opacity:0;animation:fu .9s var(--e1) .15s forwards;
+}
+
+/* Giant wordmark */
+.h-mark{
+  font-family:var(--fd);font-weight:300;
+  font-size:clamp(5rem,13vw,11rem);
+  letter-spacing:.28em;color:var(--w100);
+  line-height:1;text-transform:uppercase;
+  text-shadow:0 2px 40px rgba(0,0,0,.6);
+  opacity:0;animation:fu 1.1s var(--e1) .3s forwards;
+}
+
+/* Thin gold rule */
+.h-rule{
+  width:0;height:1px;background:var(--gold);
+  margin:1.8rem auto;
+  animation:widen .9s var(--e1) .9s forwards;
+}
+@keyframes widen{to{width:60px}}
+
+/* Main headline */
+.h-line{
+  font-family:var(--fd);font-size:clamp(1.15rem,2.3vw,1.8rem);
+  font-weight:400;font-style:italic;color:var(--w100);
+  line-height:1.5;letter-spacing:.01em;
+  text-shadow:0 1px 20px rgba(0,0,0,.7);
+  opacity:0;animation:fu .9s var(--e1) 1s forwards;
+}
+
+/* Sub paragraph */
+.h-sub{
+  margin-top:1rem;
+  font-size:clamp(.78rem,1.2vw,.88rem);
+  color:var(--w70);line-height:1.8;
+  font-weight:300;letter-spacing:.03em;
+  max-width:560px;
+  text-shadow:0 1px 12px rgba(0,0,0,.8);
+  opacity:0;animation:fu .9s var(--e1) 1.15s forwards;
+}
+
+/* Direction pills */
+.h-dirs{
+  display:flex;gap:1rem;margin-top:2rem;
+  opacity:0;animation:fu .9s var(--e1) 1.28s forwards;
+}
+.h-dir{
+  display:flex;align-items:center;gap:.55rem;
+  padding:.52rem 1.5rem;
+  font-size:.65rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--w70);border:1px solid var(--w30);
+  transition:all .35s;cursor:default;
+}
+.h-dir.imp{border-left:2px solid rgba(220,100,100,.6)}
+.h-dir.exp{border-left:2px solid rgba(80,180,120,.6)}
+.h-dir:hover{border-color:var(--gold);color:var(--w100);background:var(--gold-pale)}
+
+/* CTA row */
+.h-btns{
+  display:flex;gap:1rem;margin-top:2rem;
+  opacity:0;animation:fu .9s var(--e1) 1.42s forwards;
+}
+
+@keyframes fu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+/* Corner whispers */
+.h-corner{
+  position:absolute;bottom:2.5rem;z-index:10;
+  font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(255,255,255,.2);
+}
+.h-corner.l{left:3rem}
+.h-corner.r{right:3rem;text-align:right}
+
+/* Scroll cue */
+.h-scroll{
+  position:absolute;bottom:2.5rem;left:50%;
+  transform:translateX(-50%);z-index:10;
+  display:flex;flex-direction:column;align-items:center;gap:.5rem;
+}
+.h-scroll span{font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--w30)}
+.scroll-bar{width:1px;height:42px;overflow:hidden;background:rgba(255,255,255,.12)}
+.scroll-bar::after{
+  content:'';display:block;width:1px;height:42px;
+  background:linear-gradient(to bottom,var(--gold),transparent);
+  animation:sb 2.2s ease-in-out infinite;
+}
+@keyframes sb{0%{transform:translateY(-42px)}100%{transform:translateY(42px)}}
+
+/* Buttons shared */
+.btn-g{
+  font-family:var(--fb);font-size:.68rem;font-weight:400;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:.9rem 2.4rem;border:1px solid var(--gold);
+  background:var(--gold);color:var(--ink);
+  transition:background .3s,color .3s;
+}
+.btn-g:hover{background:transparent;color:var(--gold)}
+.btn-o{
+  font-family:var(--fb);font-size:.68rem;font-weight:400;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:.9rem 2.4rem;border:1px solid var(--w30);
+  background:transparent;color:var(--w100);
+  transition:border-color .3s;
+}
+.btn-o:hover{border-color:var(--w100)}
+
+
+/* ════════════════════════════════════════════════════════
+   TRUST BAR
+════════════════════════════════════════════════════════ */
+#trust{
+  background:var(--ink-2);
+  border-top:1px solid rgba(196,151,58,.2);
+  border-bottom:1px solid rgba(196,151,58,.2);
+  padding:1.3rem 4rem;
+  display:flex;align-items:center;justify-content:center;
+}
+.t-item{
+  display:flex;align-items:center;gap:.7rem;
+  padding:0 2.6rem;position:relative;
+}
+.t-item+.t-item::before{
+  content:'';position:absolute;left:0;top:50%;
+  transform:translateY(-50%);
+  width:1px;height:18px;background:rgba(196,151,58,.25);
+}
+.t-icon{width:15px;height:15px;opacity:.55;flex-shrink:0;stroke:var(--gold)}
+.t-text{
+  font-size:.65rem;font-weight:400;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--w50);
+}
+
+
+/* ════════════════════════════════════════════════════════
+   ABOUT
+════════════════════════════════════════════════════════ */
+#about{background:var(--cream)}
+
+/* ── 1. Cinematic intro banner */
+.ab-banner{
+  position:relative;height:72vh;min-height:500px;
+  overflow:hidden;
+  display:flex;align-items:flex-end;
+}
+.ab-banner-bg{
+  position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1800&q=85') center/cover no-repeat;
+}
+.ab-banner-ov{
+  position:absolute;inset:0;
+  background:linear-gradient(
+    135deg,
+    rgba(8,8,8,.88) 0%,
+    rgba(8,8,8,.65) 45%,
+    rgba(8,8,8,.25) 100%
+  );
+}
+.ab-banner-body{
+  position:relative;z-index:2;
+  padding:0 6rem 5rem;
+  max-width:700px;
+}
+.ab-banner-body .lbl{color:var(--gold)}
+.ab-banner-title{
+  font-family:var(--fd);font-size:clamp(3rem,6vw,5.5rem);
+  font-weight:300;color:var(--w100);line-height:1.1;
+}
+.ab-banner-title em{font-style:italic;color:var(--gold)}
+.ab-banner-sub{
+  margin-top:1.2rem;
+  font-size:.9rem;color:var(--w70);line-height:1.8;max-width:480px;
+}
+
+/* Gold bar accent on banner */
+.ab-banner::after{
+  content:'';
+  position:absolute;left:0;top:0;bottom:0;
+  width:4px;
+  background:linear-gradient(to bottom,transparent,var(--gold) 30%,var(--gold) 70%,transparent);
+  z-index:3;
+}
+
+/* ── 2. Story: text + key features panel */
+.ab-story{
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:580px;
+}
+.ab-story-text{
+  background:var(--ink);
+  padding:5.5rem 5rem 5.5rem 6rem;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;
+}
+.ab-story-text::before{
+  content:'';
+  position:absolute;top:4rem;bottom:4rem;left:0;
+  width:3px;
+  background:linear-gradient(to bottom,transparent,var(--gold),transparent);
+}
+.ab-story-text p{
+  font-size:.88rem;line-height:2;color:var(--w70);
+  margin-bottom:1.1rem;
+}
+.ab-story-text p:first-of-type{
+  font-family:var(--fd);font-size:1.05rem;
+  color:var(--w100);font-style:italic;line-height:1.8;
+  margin-bottom:1.5rem;
+}
+
+/* Key features panel — no photo */
+.ab-story-panel{
+  background:var(--ink-3);
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.ab-story-panel::before{
+  content:'TURCO';
+  position:absolute;bottom:-2rem;right:-1rem;
+  font-family:var(--fd);font-size:11rem;font-weight:300;
+  color:rgba(255,255,255,.03);line-height:1;
+  pointer-events:none;letter-spacing:.1em;
+}
+.ab-story-panel::after{
+  content:'';
+  position:absolute;left:0;top:0;bottom:0;
+  width:1px;
+  background:linear-gradient(to bottom,transparent,rgba(196,151,58,.35),transparent);
+}
+.ab-feat-list{
+  display:flex;flex-direction:column;
+  position:relative;z-index:1;
+}
+.ab-feat{
+  padding:2.6rem 4rem;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  position:relative;
+  transition:background .35s;
+}
+.ab-feat:first-child{border-top:1px solid rgba(255,255,255,.05)}
+.ab-feat:hover{background:rgba(255,255,255,.03)}
+.ab-feat::after{
+  content:'';
+  position:absolute;left:0;top:0;bottom:0;
+  width:2px;background:var(--gold);
+  transform:scaleY(0);transform-origin:bottom;
+  transition:transform .4s var(--e1);
+}
+.ab-feat:hover::after{transform:scaleY(1)}
+.ab-feat-num{
+  font-family:var(--fd);font-size:.7rem;font-weight:400;
+  letter-spacing:.18em;color:var(--gold);
+  margin-bottom:.5rem;
+}
+.ab-feat-title{
+  font-family:var(--fd);font-size:1.5rem;font-weight:400;
+  color:var(--w100);line-height:1.2;
+}
+.ab-feat-title-small{
+  font-size:.75rem;font-weight:300;letter-spacing:.06em;
+  color:var(--w50);margin-top:.3rem;
+}
+
+/* ── 5. Certification block — no photo */
+.ab-cert{
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:440px;
+  background:var(--ink-2);
+}
+.ab-cert-left{
+  padding:5rem 4rem 5rem 6rem;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;
+  border-right:1px solid rgba(196,151,58,.12);
+}
+.ab-cert-left::before{
+  content:'"';
+  position:absolute;top:-2rem;left:4rem;
+  font-family:var(--fd);font-size:16rem;font-weight:300;
+  color:rgba(196,151,58,.04);line-height:1;pointer-events:none;
+}
+.ab-cert-seal{
+  width:72px;height:72px;
+  border:1px solid rgba(196,151,58,.4);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:2rem;
+}
+.ab-cert-seal svg{width:36px;height:36px;stroke:var(--gold);fill:none;stroke-width:1}
+.ab-cert-right{
+  padding:5rem;
+  display:flex;flex-direction:column;justify-content:center;
+  gap:0;
+}
+.ab-cert-row{
+  display:flex;align-items:flex-start;gap:1.5rem;
+  padding:1.8rem 0;
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.ab-cert-row:first-child{border-top:1px solid rgba(255,255,255,.05)}
+.ab-cert-row-num{
+  font-family:var(--fd);font-size:.8rem;font-weight:400;
+  color:var(--gold);flex-shrink:0;min-width:22px;padding-top:3px;
+}
+.ab-cert-row-text h5{
+  font-family:var(--fd);font-size:1.1rem;font-weight:500;
+  color:var(--w100);margin-bottom:.3rem;
+}
+.ab-cert-row-text p{font-size:.78rem;color:var(--w50);line-height:1.7}
+
+/* ── 3. Mission statement */
+.ab-mission{
+  background:var(--ink-2);
+  padding:7rem 6rem;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.ab-mission::before{
+  content:'"';
+  position:absolute;top:-4rem;left:3rem;
+  font-family:var(--fd);font-size:22rem;font-weight:300;
+  color:rgba(196,151,58,.05);line-height:1;pointer-events:none;
+}
+.ab-mission-q{
+  font-family:var(--fd);
+  font-size:clamp(1.7rem,3.2vw,2.8rem);
+  font-weight:400;font-style:italic;
+  color:var(--w100);line-height:1.55;
+  max-width:780px;margin:0 auto;
+  position:relative;
+}
+.ab-mission-q em{color:var(--gold);font-style:italic}
+.ab-mission-src{
+  margin-top:2rem;
+  font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);
+}
+
+/* ── 4. Values — 2×2 grid with full visual weight */
+.ab-values{
+  background:var(--cream-2);
+  padding:7rem 6rem;
+}
+.ab-values-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1px;background:rgba(0,0,0,.08);
+  margin-top:3.5rem;
+  border:1px solid rgba(0,0,0,.08);
+}
+.ab-val{
+  background:var(--cream);
+  padding:3.5rem;
+  position:relative;
+  overflow:hidden;
+  transition:background .4s;
+}
+.ab-val:hover{background:#fff}
+/* Large ghost number */
+.ab-val-ghost{
+  position:absolute;top:-1.5rem;right:1.5rem;
+  font-family:var(--fd);font-size:8rem;font-weight:300;
+  color:rgba(0,0,0,.04);line-height:1;pointer-events:none;
+  transition:color .4s;
+}
+.ab-val:hover .ab-val-ghost{color:rgba(196,151,58,.07)}
+/* Bottom hover line */
+.ab-val::after{
+  content:'';position:absolute;bottom:0;left:3.5rem;right:3.5rem;
+  height:2px;background:var(--gold);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .5s var(--e1);
+}
+.ab-val:hover::after{transform:scaleX(1)}
+.ab-val-icon{
+  width:40px;height:40px;margin-bottom:1.4rem;
+  stroke:var(--gold);fill:none;stroke-width:1;
+}
+.ab-val-title{
+  font-family:var(--fd);font-size:1.45rem;font-weight:500;
+  color:#1a1510;margin-bottom:.7rem;
+}
+.ab-val-desc{font-size:.84rem;color:#4a4540;line-height:1.8}
+
+/* ── 6. Why TURCO — asymmetric layout */
+.ab-why{
+  background:var(--cream);
+  display:grid;grid-template-columns:5fr 7fr;
+  min-height:480px;
+}
+.ab-why-left{
+  background:var(--ink);
+  padding:5.5rem;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;
+}
+.ab-why-left::after{
+  content:'';
+  position:absolute;top:0;right:-1px;bottom:0;
+  width:1px;background:linear-gradient(to bottom,transparent,var(--gold),transparent);
+  z-index:2;
+}
+.ab-why-title{
+  font-family:var(--fd);font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:300;color:var(--w100);line-height:1.2;
+}
+.ab-why-title em{font-style:italic;color:var(--gold)}
+.ab-why-right{
+  background:var(--cream);
+  padding:4rem 4rem 4rem 4.5rem;
+  display:flex;flex-direction:column;justify-content:center;
+  gap:0;
+  overflow:hidden;
+  min-width:0;
+}
+.ab-why-item{
+  display:flex;align-items:flex-start;gap:1.5rem;
+  padding:1.8rem 0;
+  border-bottom:1px solid rgba(0,0,0,.07);
+  position:relative;
+  min-width:0;
+}
+.ab-why-item:first-child{border-top:1px solid rgba(0,0,0,.07)}
+.ab-why-num{
+  font-family:var(--fd);font-size:.95rem;font-weight:500;
+  color:var(--gold);flex-shrink:0;padding-top:3px;min-width:28px;
+}
+.ab-why-content{min-width:0;flex:1}
+.ab-why-content h4{
+  font-family:var(--fd);font-size:1.1rem;font-weight:500;
+  color:#1a1510;margin-bottom:.4rem;line-height:1.3;
+}
+.ab-why-content p{font-size:.82rem;color:#5a5550;line-height:1.75;word-wrap:break-word}
+
+
+/* ════════════════════════════════════════════════════════
+   IMPORT
+════════════════════════════════════════════════════════ */
+#import{background:var(--ink)}
+
+.imp-hero{
+  position:relative;height:65vh;min-height:480px;
+  overflow:hidden;display:flex;align-items:flex-end;
+}
+.imp-hero-bg{
+  position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1800&q=80') center 40%/cover no-repeat;
+}
+.imp-hero-ov{
+  position:absolute;inset:0;
+  background:linear-gradient(
+    to right,
+    rgba(80,12,12,.92) 0%,
+    rgba(40,6,6,.78) 50%,
+    rgba(8,8,8,.5) 100%
+  );
+}
+.imp-hero::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;
+  width:4px;z-index:3;
+  background:linear-gradient(to bottom,transparent,var(--spice) 30%,var(--spice) 70%,transparent);
+}
+.imp-hero-body{
+  position:relative;z-index:2;
+  padding:0 6rem 4.5rem;max-width:700px;
+}
+.imp-hero-body .lbl{color:#e07070}
+.imp-hero-body .lbl::before{background:#e07070}
+.imp-hero-title{
+  font-family:var(--fd);font-size:clamp(2.2rem,4.5vw,3.8rem);
+  font-weight:300;color:var(--w100);line-height:1.2;
+}
+.imp-hero-title em{font-style:italic;color:#e07070}
+.imp-hero-sub{
+  margin-top:1rem;font-size:.86rem;
+  color:var(--w70);max-width:480px;line-height:1.75;
+}
+
+/* Products grid */
+.prod-grid{
+  padding:4rem 3rem;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:rgba(196,151,58,.08);
+}
+.prod-card{
+  background:var(--ink-2);overflow:hidden;
+  position:relative;cursor:default;
+  transition:background .35s;
+}
+.prod-card:hover{background:#111}
+.prod-img{height:190px;overflow:hidden;position:relative}
+.prod-img img{
+  width:100%;height:100%;object-fit:cover;
+  filter:saturate(.8) brightness(.9);
+  transition:transform .8s var(--e1),filter .5s;
+}
+.prod-card:hover .prod-img img{
+  transform:scale(1.07);filter:saturate(1.05) brightness(.95);
+}
+.prod-img-ov{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(8,8,8,.75) 0%,transparent 55%);
+}
+.prod-body{padding:1.3rem 1.5rem 1.8rem;position:relative}
+.prod-body::after{
+  content:'';position:absolute;bottom:0;left:1.5rem;right:1.5rem;
+  height:1px;background:var(--gold);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .45s var(--e1);
+}
+.prod-card:hover .prod-body::after{transform:scaleX(1)}
+.prod-no{
+  font-size:.58rem;letter-spacing:.2em;color:var(--gold);margin-bottom:.5rem;
+}
+.prod-zh{
+  font-family:'Noto Serif TC',serif;font-size:1.05rem;
+  font-weight:400;color:var(--w100);margin-bottom:.2rem;
+}
+.prod-en{
+  font-size:.7rem;font-weight:400;letter-spacing:.07em;
+  color:var(--w50);margin-bottom:.8rem;
+}
+.prod-desc{
+  font-size:.74rem;color:rgba(255,255,255,.38);line-height:1.7;
+}
+.prod-inq{
+  display:inline-flex;align-items:center;gap:.4rem;
+  margin-top:.9rem;
+  font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--gold);
+  opacity:0;transform:translateY(5px);
+  transition:opacity .3s,transform .3s;
+}
+.prod-card:hover .prod-inq{opacity:1;transform:none}
+.prod-inq svg{width:12px;height:12px;transition:transform .2s}
+.prod-card:hover .prod-inq svg{transform:translateX(3px)}
+
+/* Process */
+.imp-process{
+  background:var(--ink-3);
+  padding:5rem 6rem;
+  border-top:1px solid rgba(196,151,58,.1);
+}
+.process-row{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:0;margin-top:3rem;position:relative;
+}
+.process-row::before{
+  content:'';position:absolute;
+  top:22px;left:calc(16.66% + 22px);right:calc(16.66% + 22px);
+  height:1px;background:linear-gradient(to right,var(--gold),var(--gold));
+  opacity:.3;z-index:0;
+}
+.p-step{text-align:center;padding:0 2.5rem;position:relative;z-index:1}
+.p-num{
+  width:44px;height:44px;border-radius:50%;
+  border:1px solid rgba(196,151,58,.5);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--fd);font-size:1rem;font-weight:400;color:var(--gold);
+  margin:0 auto 1.5rem;background:var(--ink-3);
+}
+.p-title{
+  font-family:var(--fd);font-size:1.15rem;font-weight:500;
+  color:var(--w100);margin-bottom:.6rem;
+}
+.p-desc{font-size:.78rem;color:var(--w50);line-height:1.75}
+
+
+/* ════════════════════════════════════════════════════════
+   EXPORT
+════════════════════════════════════════════════════════ */
+#export{background:var(--ink)}
+
+.exp-hero{
+  position:relative;height:65vh;min-height:480px;
+  overflow:hidden;display:flex;align-items:flex-end;
+}
+.exp-hero-bg{
+  position:absolute;inset:0;
+  background:url('https://raw.githubusercontent.com/hankggdrive-source/turco/main/export-hero.jpeg') center 35%/cover no-repeat;
+}
+.exp-hero-ov{
+  position:absolute;inset:0;
+  background:linear-gradient(
+    to right,
+    rgba(8,35,20,.93) 0%,
+    rgba(5,25,14,.78) 50%,
+    rgba(8,8,8,.5) 100%
+  );
+}
+.exp-hero::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;
+  width:4px;z-index:3;
+  background:linear-gradient(to bottom,transparent,#2a7a4a 30%,#2a7a4a 70%,transparent);
+}
+.exp-hero-body{
+  position:relative;z-index:2;
+  padding:0 6rem 4.5rem;max-width:700px;
+}
+.exp-hero-body .lbl{color:#6ecf96}
+.exp-hero-body .lbl::before{background:#6ecf96}
+.exp-hero-title{
+  font-family:var(--fd);font-size:clamp(2.2rem,4.5vw,3.8rem);
+  font-weight:300;color:var(--w100);line-height:1.2;
+}
+.exp-hero-title em{font-style:italic;color:#6ecf96}
+.exp-hero-sub{
+  margin-top:1rem;font-size:.86rem;
+  color:var(--w70);max-width:480px;line-height:1.75;
+}
+
+.exp-grid{
+  padding:4rem 3rem;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:rgba(42,122,74,.1);
+}
+.exp-card{background:var(--ink-2)}
+.exp-card .prod-img{height:260px}
+.exp-card .prod-no{color:#6ecf96}
+.exp-card .prod-body::after{background:#2a7a4a}
+.exp-card .prod-inq{color:#6ecf96}
+.exp-card:hover{background:#0d1a11}
+
+.exp-cta{
+  position:relative;overflow:hidden;
+  background:var(--jade);
+  padding:5rem 6rem;
+  display:grid;grid-template-columns:1fr auto;
+  gap:4rem;align-items:center;
+}
+.exp-cta::before{
+  content:'出口';
+  position:absolute;right:-1rem;bottom:-3rem;
+  font-family:var(--fd);font-size:16rem;font-weight:300;
+  color:rgba(255,255,255,.04);line-height:1;
+  pointer-events:none;letter-spacing:-.05em;
+}
+.exp-cta-title{
+  font-family:var(--fd);font-size:clamp(1.6rem,3vw,2.4rem);
+  font-weight:400;font-style:italic;color:var(--w100);
+  line-height:1.4;margin-bottom:.8rem;
+}
+.exp-cta-desc{font-size:.84rem;color:rgba(255,255,255,.62);line-height:1.8}
+.btn-jade{
+  font-size:.65rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--w100);padding:.9rem 2.4rem;
+  border:1px solid rgba(255,255,255,.35);background:transparent;
+  white-space:nowrap;flex-shrink:0;
+  transition:all .3s;
+}
+.btn-jade:hover{background:rgba(255,255,255,.1);border-color:var(--w100)}
+
+
+/* ════════════════════════════════════════════════════════
+   SERVICES
+════════════════════════════════════════════════════════ */
+#services{
+  background:var(--ink);
+  padding:8rem 6rem;
+  position:relative;overflow:hidden;
+}
+#services::before{
+  content:'SERVICE';
+  position:absolute;top:4rem;right:-2rem;
+  font-family:var(--fd);font-size:14rem;font-weight:300;
+  color:rgba(255,255,255,.02);line-height:1;
+  letter-spacing:.08em;pointer-events:none;
+}
+.svc-header{max-width:580px;margin-bottom:5rem}
+.svc-header .stitle{color:var(--w100)}
+.svc-header p{margin-top:1.2rem;font-size:.88rem;color:var(--w50);line-height:1.85}
+.svc-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:rgba(196,151,58,.07);
+}
+.svc-card{
+  background:var(--ink);padding:3rem 2.5rem;
+  position:relative;transition:background .4s;
+}
+.svc-card:hover{background:var(--ink-2)}
+.svc-card::after{
+  content:'';position:absolute;bottom:0;left:2.5rem;right:2.5rem;
+  height:1px;background:var(--gold);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .5s var(--e1);
+}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-ghost{
+  font-family:var(--fd);font-size:7rem;font-weight:300;
+  color:rgba(255,255,255,.035);line-height:1;
+  margin-bottom:-1.5rem;transition:color .4s;
+}
+.svc-card:hover .svc-ghost{color:rgba(196,151,58,.07)}
+.svc-icon{
+  width:36px;height:36px;stroke:var(--gold);fill:none;
+  stroke-width:1;margin-bottom:1.2rem;
+}
+.svc-title{
+  font-family:var(--fd);font-size:1.2rem;font-weight:500;
+  color:var(--w100);margin-bottom:.8rem;line-height:1.3;
+}
+.svc-desc{font-size:.79rem;color:rgba(255,255,255,.42);line-height:1.8}
+.serve-band{
+  margin-top:5rem;padding-top:3rem;
+  border-top:1px solid rgba(196,151,58,.12);
+  display:flex;align-items:center;gap:3rem;flex-wrap:wrap;
+}
+.serve-lbl{
+  font-size:.62rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold);flex-shrink:0;
+}
+.serve-tags{display:flex;gap:.7rem;flex-wrap:wrap}
+.serve-tag{
+  font-size:.7rem;letter-spacing:.1em;color:var(--w50);
+  padding:.42rem 1.1rem;border:1px solid rgba(255,255,255,.1);
+  transition:border-color .3s,color .3s;
+}
+.serve-tag:hover{border-color:var(--gold);color:var(--w100)}
+
+
+/* ════════════════════════════════════════════════════════
+   CONTACT / FOOTER
+════════════════════════════════════════════════════════ */
+#contact{background:var(--cream)}
+
+.ct-top{
+  display:grid;grid-template-columns:1.2fr 0.8fr;
+  min-height:520px;
+}
+.ct-left{
+  background:var(--ink);
+  padding:6rem;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;
+}
+.ct-left::after{
+  content:'';position:absolute;top:0;right:0;bottom:0;
+  width:1px;
+  background:linear-gradient(to bottom,transparent,rgba(196,151,58,.4),transparent);
+}
+.ct-left .lbl{color:var(--gold)}
+.ct-heading{
+  font-family:var(--fd);font-size:clamp(2.4rem,4vw,3.8rem);
+  font-weight:300;color:var(--w100);line-height:1.2;
+  margin-bottom:1.2rem;
+}
+.ct-heading em{font-style:italic;color:var(--gold)}
+.ct-sub{font-size:.88rem;color:var(--w50);line-height:1.85;margin-bottom:2rem}
+.ct-response{
+  display:inline-flex;align-items:center;gap:.7rem;
+  font-size:.7rem;letter-spacing:.1em;font-style:italic;color:var(--gold);
+}
+.ct-response::before{content:'';width:22px;height:1px;background:var(--gold)}
+
+.ct-right{
+  background:var(--cream);
+  padding:6rem 5rem;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.ct-items{display:flex;flex-direction:column}
+.ct-item{
+  display:grid;grid-template-columns:72px 1fr;
+  gap:1rem;align-items:start;
+  padding:1.7rem 0;
+  border-bottom:1px solid rgba(0,0,0,.07);
+}
+.ct-item:first-child{border-top:1px solid rgba(0,0,0,.07)}
+.ct-lbl{
+  font-size:.6rem;font-weight:400;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gold);padding-top:3px;
+}
+.ct-val{
+  font-family:var(--fd);font-size:1.1rem;font-weight:400;
+  color:#1a1510;line-height:1.4;
+}
+a.ct-val{transition:color .3s}
+a.ct-val:hover{color:var(--gold)}
+.ct-sub2{font-size:.73rem;color:#8a8580;margin-top:.25rem}
+
+.ct-24{
+  margin-top:2.5rem;
+  display:flex;align-items:center;gap:.8rem;
+  font-size:.72rem;letter-spacing:.1em;font-style:italic;color:#8a8580;
+}
+.ct-24::before{content:'';width:20px;height:1px;background:var(--gold)}
+
+footer{
+  background:var(--ink);
+  padding:1.8rem 6rem;
+  display:flex;align-items:center;justify-content:space-between;
+  border-top:1px solid rgba(196,151,58,.18);
+}
+.ft-logo{
+  font-family:var(--fd);font-size:1.2rem;font-weight:400;
+  letter-spacing:.22em;color:var(--gold);text-transform:uppercase;
+}
+.ft-brand{font-size:.65rem;color:rgba(255,255,255,.28);margin-top:.3rem;letter-spacing:.04em}
+.ft-copy{font-size:.62rem;color:rgba(255,255,255,.22);letter-spacing:.06em;text-align:right}
+
+
+/* ════════════════════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════════════════════ */
+@media(max-width:1100px){
+  .prod-grid{grid-template-columns:repeat(3,1fr);padding:3rem 2rem}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .ab-why{grid-template-columns:1fr}
+  .ab-why-left{padding:4rem}
+  .ab-why-right{padding:4rem}
+}
+@media(max-width:900px){
+  #nav{padding:0 1.5rem}
+  .nav-links{display:none}
+  .sp{padding:3.5rem 1.8rem}
+  .ab-banner-body,.imp-hero-body,.exp-hero-body{padding:0 1.8rem 3rem}
+  .ab-story{grid-template-columns:1fr}
+  .ab-story-panel{min-height:auto}
+  .ab-feat{padding:2rem 1.8rem}
+  .ab-story-text{padding:3rem 2rem}
+  .ab-mission{padding:5rem 2rem}
+  .ab-values{padding:4rem 2rem}
+  .ab-values-grid{grid-template-columns:1fr}
+  .ab-cert{grid-template-columns:1fr}
+  .ab-cert-left{padding:3rem 2rem}
+  .ab-cert-right{padding:3rem 2rem}
+  .prod-grid{grid-template-columns:repeat(2,1fr);padding:2.5rem 1.5rem}
+  .exp-grid{grid-template-columns:1fr;padding:2.5rem 1.5rem}
+  .exp-cta{grid-template-columns:1fr;padding:3rem 2rem}
+  .process-row{grid-template-columns:1fr;gap:2.5rem}
+  .process-row::before{display:none}
+  .svc-grid{grid-template-columns:1fr}
+  #services{padding:4rem 2rem}
+  .ct-top{grid-template-columns:1fr}
+  .ct-left{padding:4rem 2rem}
+  .ct-right{padding:4rem 2rem}
+  footer{padding:1.5rem 2rem;flex-direction:column;gap:1rem;text-align:center}
+  .ft-copy{text-align:center}
+  .h-dirs{flex-direction:column;align-items:center}
+  .h-mark{font-size:3.5rem;letter-spacing:.18em}
+  .h-corner{display:none}
+}
+
+</style>
+</head>
+<body data-lang="zh">
+
+<!-- ══ NAV ══════════════════════════════════════════════════ -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">TURCO</a>
+  <ul class="nav-links">
+    <li><a href="#about" class="zh">關於我們</a><a href="#about" class="en">About</a></li>
+    <li><a href="#import" class="zh">進口產品</a><a href="#import" class="en">Import</a></li>
+    <li><a href="#export" class="zh">出口產品</a><a href="#export" class="en">Export</a></li>
+    <li><a href="#services" class="zh">服務</a><a href="#services" class="en">Services</a></li>
+  </ul>
+  <div class="nav-r">
+    <a href="#contact" class="nav-cta zh">聯絡我們</a>
+    <a href="#contact" class="nav-cta en">Contact</a>
+    <div class="ltoggle">
+      <button class="on" data-l="zh">中文</button>
+      <button data-l="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HERO ══════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-tint"></div>
+
+  <div class="hero-body">
+    <div class="h-eye zh">台灣 · 跨境食品貿易</div>
+    <div class="h-eye en">Taiwan · Cross-Border Food Trade</div>
+
+    <div class="h-mark">TURCO</div>
+    <div class="h-rule"></div>
+
+    <h1 class="h-line zh">我們連結台灣與全球食品市場，實現雙向流通。</h1>
+    <h1 class="h-line en">Connecting Taiwan with Global Food Markets — In Both Directions</h1>
+
+    <p class="h-sub zh">TURCO 是一家總部位於台灣的跨境食品貿易公司，作為台灣專業的食品採購與供應商，我們將全球優質食品引進台灣，並將台灣出口食品推向國際市場。</p>
+    <p class="h-sub en">TURCO is a Taiwan-based food supplier and food supply partner specializing in cross-border trade, bringing global products into Taiwan while introducing Taiwanese quality to international markets.</p>
+
+    <div class="h-dirs">
+      <div class="h-dir imp">
+        <span>↓</span>
+        <span class="zh">進口 · 引進台灣</span>
+        <span class="en">Import into Taiwan</span>
+      </div>
+      <div class="h-dir exp">
+        <span>↑</span>
+        <span class="zh">出口 · 走向世界</span>
+        <span class="en">Export to the World</span>
+      </div>
+    </div>
+
+    <div class="h-btns">
+      <a href="#contact" class="btn-g zh">立即聯繫我們</a>
+      <a href="#contact" class="btn-g en">Get in Touch</a>
+      <a href="#about" class="btn-o zh">了解更多</a>
+      <a href="#about" class="btn-o en">Learn More</a>
+    </div>
+  </div>
+
+  <div class="h-corner l zh">總部位於台灣 · 亞興國際企業有限公司</div>
+  <div class="h-corner l en">Taiwan-Based · 亞興國際企業有限公司</div>
+  <div class="h-corner r">B2B · Food Trade · Import &amp; Export</div>
+
+  <div class="h-scroll">
+    <div class="scroll-bar"></div>
+    <span class="zh">向下滾動</span>
+    <span class="en">Scroll</span>
+  </div>
+</section>
+
+<!-- ══ TRUST BAR ══════════════════════════════════════════════ -->
+<div id="trust">
+  <div class="t-item">
+    <svg class="t-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+    <span class="t-text zh">總部位於台灣</span><span class="t-text en">Taiwan-Based</span>
+  </div>
+  <div class="t-item">
+    <svg class="t-icon" viewBox="0 0 24 24"><path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4"/></svg>
+    <span class="t-text zh">進口與出口</span><span class="t-text en">Import &amp; Export</span>
+  </div>
+  <div class="t-item">
+    <svg class="t-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+    <span class="t-text zh">企業對企業 B2B</span><span class="t-text en">B2B Focused</span>
+  </div>
+  <div class="t-item">
+    <svg class="t-icon" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+    <span class="t-text zh">符合認證標準</span><span class="t-text en">Certified Standards</span>
+  </div>
+</div>
+
+<!-- ══ ABOUT ══════════════════════════════════════════════════ -->
+<section id="about">
+
+  <!-- 1. Cinematic banner -->
+  <div class="ab-banner">
+    <div class="ab-banner-bg"></div>
+    <div class="ab-banner-ov"></div>
+    <div class="ab-banner-body rv">
+      <div class="lbl zh">關於我們</div>
+      <div class="lbl en">About Us</div>
+      <h2 class="ab-banner-title zh">我們是 <em>TURCO</em></h2>
+      <h2 class="ab-banner-title en">We Are <em>TURCO</em></h2>
+      <p class="ab-banner-sub zh">一家總部位於台灣、專注於跨境食品貿易及供應解決方案的公司——連結台灣與全球食品市場。</p>
+      <p class="ab-banner-sub en">A Taiwan-based company focused on cross-border food trade and supply solutions — connecting Taiwan with global food markets through seamless two-way trade.</p>
+    </div>
+  </div>
+
+  <!-- 2. Story text + image -->
+  <div class="ab-story">
+    <div class="ab-story-text">
+      <div class="lbl rv zh">我們的故事</div>
+      <div class="lbl rv en">Our Story</div>
+      <p class="zh rv">我們是 TURCO，一家總部位於台灣、專注於跨境食品貿易及供應解決方案的公司。我們的業務涵蓋進出口兩個方向。</p>
+      <p class="en rv">We are TURCO, a Taiwan-based food supplier and trading company focused on cross-border food trade and supply solutions. We connect Taiwan with global food markets through seamless two-way trade.</p>
+      <p class="zh rv d1">在進口方面，我們精心引進多款特色產品，包括土耳其咖啡、土耳其茶、水果茶、土耳其軟糖、玫瑰水、開心果醬及卡達伊夫等，每項產品均以品質與市場適配性為首要考量。</p>
+      <p class="en rv d1">On the import side, we carefully source selected specialty products including Turkish coffee, Turkish tea, fruit teas, Turkish delight, rose water, pistachio paste, and kadayıf — each selected for its quality and strong fit with the Taiwan market.</p>
+      <p class="zh rv d2">在出口方面，身為台灣出口食品的推廣者，我們協助台灣生產商將台灣頂級茶葉、抹茶及麵條等優質產品推廣至國際合作夥伴。</p>
+      <p class="en rv d2">On the export side, as a trusted Taiwan-based food exporter, we work closely with local producers to bring premium Taiwanese teas, matcha, and noodles to international markets.</p>
+      <p class="zh rv d3">TURCO 主要服務對象為 B2B 客戶，包括經銷商、批發商、飯店及餐廳。TURCO 的目標很簡單：讓跨境食品貿易更高效、更值得信賴、更具規模化潛力。</p>
+      <p class="en rv d3">We operate as a B2B trading company working with distributors, wholesalers, hotels, and restaurants. At TURCO, our goal is simple: to make cross-border food trade efficient, trustworthy, and scalable.</p>
+    </div>
+    <div class="ab-story-panel rv d2">
+      <div class="ab-feat-list">
+        <div class="ab-feat">
+          <div class="ab-feat-num">01</div>
+          <div class="ab-feat-title zh">企業對企業</div>
+          <div class="ab-feat-title en">B2B Focused</div>
+          <div class="ab-feat-title-small zh">經銷商・批發商・飯店・餐廳</div>
+          <div class="ab-feat-title-small en">Distributors · Wholesalers · HoReCa</div>
+        </div>
+        <div class="ab-feat">
+          <div class="ab-feat-num">02</div>
+          <div class="ab-feat-title zh">進口與出口</div>
+          <div class="ab-feat-title en">Import &amp; Export</div>
+          <div class="ab-feat-title-small zh">雙向跨境食品貿易</div>
+          <div class="ab-feat-title-small en">Two-way cross-border food trade</div>
+        </div>
+        <div class="ab-feat">
+          <div class="ab-feat-num">03</div>
+          <div class="ab-feat-title zh">符合認證標準</div>
+          <div class="ab-feat-title en">Certified Standards</div>
+          <div class="ab-feat-title-small zh">品質・安全・合規</div>
+          <div class="ab-feat-title-small en">Quality · Safety · Compliance</div>
+        </div>
+        <div class="ab-feat">
+          <div class="ab-feat-num">04</div>
+          <div class="ab-feat-title zh">長期夥伴關係</div>
+          <div class="ab-feat-title en">Long-term Partnerships</div>
+          <div class="ab-feat-title-small zh">可靠・一致・共同成長</div>
+          <div class="ab-feat-title-small en">Reliable · Consistent · Growing together</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Mission statement -->
+  <div class="ab-mission">
+    <blockquote class="ab-mission-q rv zh">
+      讓跨境食品貿易更高效、<em>更值得信賴</em>、更具規模。
+    </blockquote>
+    <blockquote class="ab-mission-q rv en">
+      Making cross-border food trade <em>efficient</em>, trustworthy, and scalable.
+    </blockquote>
+    <p class="ab-mission-src rv d1">TURCO · Taiwan</p>
+  </div>
+
+  <!-- 4. Values -->
+  <div class="ab-values sp">
+    <div class="lbl rv zh">核心價值</div>
+    <div class="lbl rv en">Core Values</div>
+    <div class="stitle rv d1">
+      <span class="zh">以信任為基礎，<em>以品質為承諾</em></span>
+      <span class="en">Built on Trust, <em>Committed to Quality</em></span>
+    </div>
+    <div class="ab-values-grid">
+      <div class="ab-val rv d1">
+        <div class="ab-val-ghost">01</div>
+        <svg class="ab-val-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20"/><path d="M16 24l6 6 10-12"/></svg>
+        <div class="ab-val-title zh">可靠性</div>
+        <div class="ab-val-title en">Reliability</div>
+        <div class="ab-val-desc zh">穩定的供應，準時交付，讓您安心合作。</div>
+        <div class="ab-val-desc en">Consistent supply and on-time delivery you can count on.</div>
+      </div>
+      <div class="ab-val rv d2">
+        <div class="ab-val-ghost">02</div>
+        <svg class="ab-val-icon" viewBox="0 0 48 48"><path d="M24 4l4 14h14l-11 8 4 14-11-8-11 8 4-14L7 18h14z"/></svg>
+        <div class="ab-val-title zh">品質</div>
+        <div class="ab-val-title en">Quality</div>
+        <div class="ab-val-desc zh">每項產品皆經過嚴格篩選，確保符合最高標準。</div>
+        <div class="ab-val-desc en">Every product is carefully selected to meet the highest standards.</div>
+      </div>
+      <div class="ab-val rv d3">
+        <div class="ab-val-ghost">03</div>
+        <svg class="ab-val-icon" viewBox="0 0 48 48"><path d="M8 24c0-8.8 7.2-16 16-16s16 7.2 16 16"/><path d="M24 8v8M40 24h-8M24 40v-8M8 24h8"/><circle cx="24" cy="24" r="4"/></svg>
+        <div class="ab-val-title zh">長期夥伴關係</div>
+        <div class="ab-val-title en">Long-term Partnerships</div>
+        <div class="ab-val-desc zh">我們與客戶共同成長，建立持久的合作關係。</div>
+        <div class="ab-val-desc en">We grow alongside our clients and build lasting relationships.</div>
+      </div>
+      <div class="ab-val rv d4">
+        <div class="ab-val-ghost">04</div>
+        <svg class="ab-val-icon" viewBox="0 0 48 48"><path d="M24 4v8M24 36v8M4 24h8M36 24h8"/><circle cx="24" cy="24" r="12"/><path d="M24 18v6l4 4"/></svg>
+        <div class="ab-val-title zh">透明度</div>
+        <div class="ab-val-title en">Transparency</div>
+        <div class="ab-val-desc zh">每個環節保持清晰溝通，讓合作更順暢。</div>
+        <div class="ab-val-desc en">Clear communication at every step of the process.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Certification — no photo, pure typography -->
+  <div class="ab-cert">
+    <div class="ab-cert-left">
+      <div class="ab-cert-seal rv">
+        <svg viewBox="0 0 48 48"><path d="M24 4l3 9h9l-7 5 3 9-8-6-8 6 3-9-7-5h9z"/><circle cx="24" cy="24" r="20" stroke-dasharray="3 3"/></svg>
+      </div>
+      <div class="lbl rv zh">認證標準</div>
+      <div class="lbl rv en">Standards</div>
+      <div class="ab-cert-title rv d1 zh">符合認證標準</div>
+      <div class="ab-cert-title rv d1 en">Certified Standards</div>
+      <div class="ab-cert-desc rv d2 zh">我們依據認證標準運營，確保所有貿易業務的產品品質、安全性與合規性。</div>
+      <div class="ab-cert-desc rv d2 en">We operate with certified standards to ensure product quality, safety, and compliance across all our trade operations.</div>
+    </div>
+    <div class="ab-cert-right">
+      <div class="ab-cert-row rv d1">
+        <div class="ab-cert-row-num">01</div>
+        <div class="ab-cert-row-text">
+          <h5 class="zh">產品品質控制</h5>
+          <h5 class="en">Product Quality Control</h5>
+          <p class="zh">每項產品均經過嚴格篩選，確保符合最高品質標準。</p>
+          <p class="en">Every product is rigorously evaluated to meet the highest quality benchmarks.</p>
+        </div>
+      </div>
+      <div class="ab-cert-row rv d2">
+        <div class="ab-cert-row-num">02</div>
+        <div class="ab-cert-row-text">
+          <h5 class="zh">食品安全合規</h5>
+          <h5 class="en">Food Safety Compliance</h5>
+          <p class="zh">所有產品均符合食品安全法規及國際標準。</p>
+          <p class="en">All products comply with food safety regulations and international standards.</p>
+        </div>
+      </div>
+      <div class="ab-cert-row rv d3">
+        <div class="ab-cert-row-num">03</div>
+        <div class="ab-cert-row-text">
+          <h5 class="zh">進出口法規遵循</h5>
+          <h5 class="en">Import/Export Regulatory Adherence</h5>
+          <p class="zh">完整遵循台灣及目標市場的進出口相關法規要求。</p>
+          <p class="en">Full adherence to import/export regulations in Taiwan and all target markets.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Why TURCO -->
+  <div class="ab-why">
+    <div class="ab-why-left">
+      <div class="lbl rv zh">為什麼選擇我們</div>
+      <div class="lbl rv en">Why Choose Us</div>
+      <div class="ab-why-title rv d1 zh">為什麼選擇<br><em>TURCO</em></div>
+      <div class="ab-why-title rv d1 en">Why<br><em>TURCO</em></div>
+    </div>
+    <div class="ab-why-right">
+      <div class="ab-why-item rv d1">
+        <div class="ab-why-num">01</div>
+        <div class="ab-why-content">
+          <h4 class="zh">雙向貿易專業能力</h4>
+          <h4 class="en">Two-Way Trade Expertise</h4>
+          <p class="zh">同時掌握進口與出口兩端，提供完整的跨境貿易解決方案。</p>
+          <p class="en">Mastery of both import and export, delivering complete cross-border trade solutions.</p>
+        </div>
+      </div>
+      <div class="ab-why-item rv d2">
+        <div class="ab-why-num">02</div>
+        <div class="ab-why-content">
+          <h4 class="zh">深入了解台灣市場</h4>
+          <h4 class="en">Strong Taiwan Market Knowledge</h4>
+          <p class="zh">深耕台灣市場，精準掌握本地需求與商業脈絡。</p>
+          <p class="en">Deep roots in Taiwan's market with precise understanding of local demand and business dynamics.</p>
+        </div>
+      </div>
+      <div class="ab-why-item rv d3">
+        <div class="ab-why-num">03</div>
+        <div class="ab-why-content">
+          <h4 class="zh">全球可靠採購網絡</h4>
+          <h4 class="en">Trusted Global Sourcing Network</h4>
+          <p class="zh">建立穩固的國際供應鏈，確保每項產品的品質與穩定供應。</p>
+          <p class="en">An established international supply chain ensuring quality and consistent availability for every product.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══ IMPORT ══════════════════════════════════════════════════ -->
+<section id="import">
+  <div class="imp-hero rv">
+    <div class="imp-hero-bg"></div>
+    <div class="imp-hero-ov"></div>
+    <div class="imp-hero-body">
+      <div class="lbl zh" style="color:#e07070"><span style="background:#e07070;width:28px;height:1px;flex-shrink:0"></span>進口產品</div>
+      <div class="lbl en" style="color:#e07070"><span style="background:#e07070;width:28px;height:1px;flex-shrink:0"></span>Import Products</div>
+      <h2 class="imp-hero-title zh">精選土耳其特色食材，<br><em>引進台灣市場</em></h2>
+      <h2 class="imp-hero-title en">Sourcing Specialty Turkish Products<br><em>for Taiwan</em></h2>
+      <p class="imp-hero-sub zh">我們精心挑選每一項產品，以品質與市場適配性為核心標準。</p>
+      <p class="imp-hero-sub en">We carefully select every product for its quality and strong fit with the Taiwan market.</p>
+    </div>
+  </div>
+
+  <div class="prod-grid">
+    <!-- 01 Kadayıf -->
+    <div class="prod-card rv d1">
+      <div class="prod-img">
+        <img src="https://raw.githubusercontent.com/hankggdrive-source/turco/main/import-01-kadayif.jpeg" alt="Kadayıf">
+        <div class="prod-img-ov"></div>
+      </div>
+      <div class="prod-body">
+        <div class="prod-no">01</div>
+        <div class="prod-zh">卡達伊夫</div>
+        <div class="prod-en">Kadayıf</div>
+        <div class="prod-desc zh">細絲狀麵糰，廣泛用於土耳其及中東傳統甜點，以其酥脆細膩的口感著稱。</div>
+        <div class="prod-desc en">Fine-shredded wheat dough used in traditional Turkish and Middle Eastern desserts, prized for its delicate, crispy texture.</div>
+        <a href="#contact" class="prod-inq zh">詢問產品 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#contact" class="prod-inq en">Inquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+    <!-- 02 Pistachio -->
+    <div class="prod-card rv d2">
+      <div class="prod-img">
+        <img src="https://raw.githubusercontent.com/hankggdrive-source/turco/main/import-02-pistachio.jpeg" alt="Pistachio Paste">
+        <div class="prod-img-ov"></div>
+      </div>
+      <div class="prod-body">
+        <div class="prod-no">02</div>
+        <div class="prod-zh">開心果醬</div>
+        <div class="prod-en">Pistachio Paste</div>
+        <div class="prod-desc zh">以優質土耳其開心果製成的濃郁香醇醬料，適用於糕點餡料、甜點及各式烘焙應用。</div>
+        <div class="prod-desc en">Rich and aromatic paste made from premium Turkish pistachios, ideal for pastry fillings, desserts, and confectionery applications.</div>
+        <a href="#contact" class="prod-inq zh">詢問產品 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#contact" class="prod-inq en">Inquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+    <!-- 03 Turkish Delight -->
+    <div class="prod-card rv d3">
+      <div class="prod-img">
+        <img src="https://raw.githubusercontent.com/hankggdrive-source/turco/main/import-03-turkish-delight.jpeg" alt="Turkish Delight">
+        <div class="prod-img-ov"></div>
+      </div>
+      <div class="prod-body">
+        <div class="prod-no">03</div>
+        <div class="prod-zh">土耳其軟糖</div>
+        <div class="prod-en">Turkish Delight</div>
+        <div class="prod-desc zh">經典鄂圖曼糖果，口感軟嫩有嚼勁，提供玫瑰、開心果、石榴等多種口味。</div>
+        <div class="prod-desc en">A classic Ottoman confection with a soft, chewy texture, available in rose, pistachio, pomegranate, and other flavors.</div>
+        <a href="#contact" class="prod-inq zh">詢問產品 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#contact" class="prod-inq en">Inquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+    <!-- 04 Turkish Coffee -->
+    <div class="prod-card rv d4">
+      <div class="prod-img">
+        <img src="https://raw.githubusercontent.com/hankggdrive-source/turco/main/import-04-turkish-coffee.jpeg" alt="Turkish Coffee">
+        <div class="prod-img-ov"></div>
+      </div>
+      <div class="prod-body">
+        <div class="prod-no">04</div>
+        <div class="prod-zh">土耳其咖啡</div>
+        <div class="prod-en">Turkish Coffee</div>
+        <div class="prod-desc zh">採用傳統土耳其沖泡方式製作的細研磨咖啡，以濃郁風味與豐厚細密的咖啡脂聞名。</div>
+        <div class="prod-desc en">Finely ground coffee prepared using the traditional Turkish method — known for its bold flavor and rich, dense foam.</div>
+        <a href="#contact" class="prod-inq zh">詢問產品 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#contact" class="prod-inq en">Inquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+    <!-- 05 Rose Water -->
+    <div class="prod-card rv d1">
+      <div class="prod-img">
+        <img src="https://raw.githubusercontent.com/hankggdrive-source/turco/main/import-05-rose-water.jpeg" alt="Rose Water">
+        <div class="prod-img-ov"></div>
+      </div>
+      <div class="prod-body">
+        <div class="prod-no">05</div>
+        <div class="prod-zh">玫瑰水</div>
+        <div class="prod-en">Rose Water</div>
+        <div class="prod-desc zh">以土耳其香氣濃郁的玫瑰蒸餾而成的純玫瑰水，廣泛應用於甜點、飲品及烹飪。</div>
+        <div class="prod-desc en">Pure distilled rose water sourced from fragrant Turkish roses, used in desserts, beverages, and culinary preparations.</div>
+        <a href="#contact" class="prod-inq zh">詢問產品 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#contact" class="prod-inq en">Inquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+    <!-- 06 Turkish Tea -->
+    <div class="prod-card rv d2">
+      <div class="prod-img">
+        <img src="https://raw.githubusercontent.com/hankggdrive-source/turco/main/import-06-turkish-tea.jpeg" alt="Turkish Tea">
+        <div class="prod-img-ov"></div>
+      </div>
+      <div class="prod-body">
+        <div class="prod-no">06</div>
+        <div class="prod-zh">土耳其紅茶</div>
+        <div class="prod-en">Turkish Tea</div>
+        <div class="prod-desc zh">產自土耳其東部黑海地區的濃郁紅茶，傳統以鬱金香形玻璃杯盛裝飲用。</div>
+        <div class="prod-desc en">Robust black tea from Turkey's Eastern Black Sea region, traditionally brewed strong and served in tulip-shaped glasses.</div>
+        <a href="#contact" class="prod-inq zh">詢問產品 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#contact" class="prod-inq en">Inquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+    <!-- 07 Fruit Teas -->
+    <div class="prod-card rv d3">
+      <div class="prod-img">
+        <img src="https://raw.githubusercontent.com/hankggdrive-source/turco/main/import-07-fruit-teas.jpeg" alt="Fruit Teas">
+        <div class="prod-img-ov"></div>
+      </div>
+      <div class="prod-body">
+        <div class="prod-no">07</div>
+        <div class="prod-zh">水果茶</div>
+        <div class="prod-en">Fruit Teas</div>
+        <div class="prod-desc zh">以土耳其乾燥水果與植物調製而成的無咖啡因草本茶，提供多種豐富口味。</div>
+        <div class="prod-desc en">Caffeine-free herbal blends made from dried Turkish fruits and botanicals, available in a wide range of flavors.</div>
+        <a href="#contact" class="prod-inq zh">詢問產品 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#contact" class="prod-inq en">Inquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="imp-process sp">
+    <div class="lbl rv zh">採購流程</div>
+    <div class="lbl rv en">Our Process</div>
+    <div class="process-row">
+      <div class="p-step rv d1">
+        <div class="p-num">01</div>
+        <div class="p-title zh">精選來源</div>
+        <div class="p-title en">Source</div>
+        <div class="p-desc zh">嚴格篩選土耳其優質供應商</div>
+        <div class="p-desc en">Carefully selected Turkish suppliers</div>
+      </div>
+      <div class="p-step rv d2">
+        <div class="p-num">02</div>
+        <div class="p-title zh">品質把關</div>
+        <div class="p-title en">Quality Check</div>
+        <div class="p-desc zh">確保符合標準與規範</div>
+        <div class="p-desc en">Ensuring compliance with standards</div>
+      </div>
+      <div class="p-step rv d3">
+        <div class="p-num">03</div>
+        <div class="p-title zh">配送到位</div>
+        <div class="p-title en">Deliver</div>
+        <div class="p-desc zh">交付至台灣 B2B 合作夥伴</div>
+        <div class="p-desc en">To B2B partners across Taiwan</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EXPORT ══════════════════════════════════════════════════ -->
+<section id="export">
+  <div class="exp-hero rv">
+    <div class="exp-hero-bg"></div>
+    <div class="exp-hero-ov"></div>
+    <div class="exp-hero-body">
+      <div class="lbl zh" style="color:#6ecf96"><span style="background:#6ecf96;width:28px;height:1px;flex-shrink:0"></span>出口產品</div>
+      <div class="lbl en" style="color:#6ecf96"><span style="background:#6ecf96;width:28px;height:1px;flex-shrink:0"></span>Export Products</div>
+      <h2 class="exp-hero-title zh">台灣優質食品，<br><em>走向世界</em></h2>
+      <h2 class="exp-hero-title en">Introducing Taiwanese Quality<br><em>to International Markets</em></h2>
+      <p class="exp-hero-sub zh">作為台灣食品出口供應夥伴，我們協助台灣生產商將優質產品推廣至全球市場。</p>
+      <p class="exp-hero-sub en">As a trusted Taiwan food supply partner and exporter, we help Taiwanese producers bring their finest products to global markets.</p>
+    </div>
+  </div>
+
+  <div class="exp-grid">
+    <div class="exp-card prod-card rv d1">
+      <div class="prod-img">
+        <img src="https://raw.githubusercontent.com/hankggdrive-source/turco/main/export-01-teas.jpeg" alt="Taiwanese Teas">
+        <div class="prod-img-ov"></div>
+      </div>
+      <div class="prod-body">
+        <div class="prod-no" style="color:#6ecf96">01</div>
+        <div class="prod-zh">台灣頂級茶葉</div>
+        <div class="prod-en">Premium Taiwanese Teas</div>
+        <div class="prod-desc zh">來自台灣知名茶區的高山烏龍茶與特色茶葉，以其豐富香氣與順滑口感享譽國際。</div>
+        <div class="prod-desc en">High-mountain oolong and specialty teas from Taiwan's renowned growing regions, celebrated for their complex aroma and smooth finish. A flagship Taiwanese export known worldwide for its quality.</div>
+        <a href="#contact" class="prod-inq" style="color:#6ecf96" class="zh">詢問產品 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+    <div class="exp-card prod-card rv d2">
+      <div class="prod-img">
+        <img src="https://raw.githubusercontent.com/hankggdrive-source/turco/main/export-02-matcha.jpeg" alt="Matcha">
+        <div class="prod-img-ov"></div>
+      </div>
+      <div class="prod-body">
+        <div class="prod-no" style="color:#6ecf96">02</div>
+        <div class="prod-zh">抹茶</div>
+        <div class="prod-en">Matcha</div>
+        <div class="prod-desc zh">色澤鮮亮、鮮味均衡的頂級抹茶，適用於飲品製作與烹飪應用。</div>
+        <div class="prod-desc en">Finely milled ceremonial-grade matcha with a vivid green color and balanced umami flavor, suitable for beverages and culinary use.</div>
+        <a href="#contact" class="prod-inq" style="color:#6ecf96">Inquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+    <div class="exp-card prod-card rv d3">
+      <div class="prod-img">
+        <img src="https://raw.githubusercontent.com/hankggdrive-source/turco/main/export-03-noodles.jpeg" alt="Noodles">
+        <div class="prod-img-ov"></div>
+      </div>
+      <div class="prod-body">
+        <div class="prod-no" style="color:#6ecf96">03</div>
+        <div class="prod-zh">麵條</div>
+        <div class="prod-en">Noodles</div>
+        <div class="prod-desc zh">以優質小麥製成的台灣頂級麵條，提供多種款式，滿足餐飲服務與零售合作夥伴的需求。</div>
+        <div class="prod-desc en">Premium Taiwanese noodles crafted from quality wheat, available in various styles for food service and retail partners.</div>
+        <a href="#contact" class="prod-inq" style="color:#6ecf96">Inquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-cta">
+    <div class="rv">
+      <h3 class="exp-cta-title zh">您是希望拓展國際市場的<br>台灣生產商嗎？</h3>
+      <h3 class="exp-cta-title en">Are you a Taiwanese producer<br>looking to expand internationally?</h3>
+      <p class="exp-cta-desc zh">我們能協助您進入新市場，將台灣優質產品推廣至全球合作夥伴。</p>
+      <p class="exp-cta-desc en">We can help you reach new markets and introduce your finest products to global partners.</p>
+    </div>
+    <a href="#contact" class="btn-jade rv d2 zh">聯絡我們 →</a>
+    <a href="#contact" class="btn-jade rv d2 en">Contact Us →</a>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══════════════════════════════════════════════════ -->
+<section id="services">
+  <div class="svc-header rv">
+    <div class="lbl zh">我們的服務</div>
+    <div class="lbl en">Our Services</div>
+    <div class="stitle">
+      <span class="zh">我們不僅僅是<em>產品的流通者</em></span>
+      <span class="en">We Go Beyond <em>Product Movement</em></span>
+    </div>
+    <p class="zh">我們提供完整的跨境貿易解決方案，讓您的業務更高效、更可靠。</p>
+    <p class="en">We provide complete cross-border trade solutions for more efficient, reliable business growth.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card rv d1">
+      <div class="svc-ghost">01</div>
+      <svg class="svc-icon" viewBox="0 0 48 48"><path d="M8 24h32M24 8l16 16-16 16M8 8l16 16-16 16"/></svg>
+      <div class="svc-title zh">跨境貿易解決方案</div>
+      <div class="svc-title en">Cross-Border Trade Solutions</div>
+      <div class="svc-desc zh">統籌進出口協調、物流支援與清關流程管理，確保貿易順暢進行。</div>
+      <div class="svc-desc en">End-to-end coordination of import/export logistics, documentation, and compliance.</div>
+    </div>
+    <div class="svc-card rv d2">
+      <div class="svc-ghost">02</div>
+      <svg class="svc-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><path d="M24 8v16l10 6"/></svg>
+      <div class="svc-title zh">採購與產品篩選</div>
+      <div class="svc-title en">Sourcing &amp; Product Selection</div>
+      <div class="svc-desc zh">我們嚴格篩選供應商與產品，作為台灣食品採購專家，只選擇最符合標準的產品。</div>
+      <div class="svc-desc en">Comprehensive food sourcing services in Taiwan and international markets — rigorous supplier evaluation, selecting only what meets our quality standards.</div>
+    </div>
+    <div class="svc-card rv d3">
+      <div class="svc-ghost">03</div>
+      <svg class="svc-icon" viewBox="0 0 48 48"><path d="M8 40V24l16-16 16 16v16H30V28H18v12H8z"/></svg>
+      <div class="svc-title zh">B2B 夥伴合作模式</div>
+      <div class="svc-title en">B2B Partnership Model</div>
+      <div class="svc-desc zh">我們與經銷商、批發商及餐飲業者建立長期穩定的合作關係，共同實現可持續成長。</div>
+      <div class="svc-desc en">Long-term collaboration with distributors, wholesalers, and hospitality partners built on trust and consistency.</div>
+    </div>
+    <div class="svc-card rv d4">
+      <div class="svc-ghost">04</div>
+      <svg class="svc-icon" viewBox="0 0 48 48"><circle cx="16" cy="16" r="8"/><circle cx="32" cy="32" r="8"/><path d="M22 22l4 4"/></svg>
+      <div class="svc-title zh">我們的服務對象</div>
+      <div class="svc-title en">Who We Serve</div>
+      <div class="svc-desc zh">我們專注於 B2B 合作，服務各類食品行業專業客戶。</div>
+      <div class="svc-desc en">We focus exclusively on B2B partnerships with food industry professionals.</div>
+    </div>
+  </div>
+  <div class="serve-band rv">
+    <div class="serve-lbl zh">服務對象</div>
+    <div class="serve-lbl en">We Serve</div>
+    <div class="serve-tags">
+      <span class="serve-tag zh">經銷商</span><span class="serve-tag en">Distributors</span>
+      <span class="serve-tag zh">批發商</span><span class="serve-tag en">Wholesalers</span>
+      <span class="serve-tag zh">飯店與餐廳</span><span class="serve-tag en">Hotels &amp; Restaurants</span>
+      <span class="serve-tag zh">食品製造商</span><span class="serve-tag en">Food Manufacturers</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="ct-top">
+    <div class="ct-left">
+      <div class="lbl rv">
+        <span class="zh">聯絡我們</span>
+        <span class="en">Get in Touch</span>
+      </div>
+      <h2 class="ct-heading rv d1 zh">準備好開始<br><em>合作了嗎？</em></h2>
+      <h2 class="ct-heading rv d1 en">Ready to Start<br><em>a Conversation?</em></h2>
+      <p class="ct-sub rv d2 zh">我們期待與您聯繫，共同探討合作可能性。</p>
+      <p class="ct-sub rv d2 en">We'd love to hear from you and explore how we can work together.</p>
+      <div class="ct-response rv d3 zh">我們將於24小時內回覆</div>
+      <div class="ct-response rv d3 en">We respond within 24 hours</div>
+    </div>
+    <div class="ct-right">
+      <div class="ct-items">
+        <div class="ct-item rv d1">
+          <div class="ct-lbl zh">電話</div>
+          <div class="ct-lbl en">Phone</div>
+          <div><a href="tel:+886979069914" class="ct-val">+886 0979 069 914</a></div>
+        </div>
+        <div class="ct-item rv d2">
+          <div class="ct-lbl zh">電子郵件</div>
+          <div class="ct-lbl en">Email</div>
+          <div><a href="mailto:yasintw@gmail.com" class="ct-val">yasintw@gmail.com</a></div>
+        </div>
+        <div class="ct-item rv d3">
+          <div class="ct-lbl">LINE</div>
+          <div>
+            <div class="ct-val">@turco</div>
+            <div class="ct-sub2 zh">透過 LINE 與我們聯繫</div>
+            <div class="ct-sub2 en">Connect with us on LINE</div>
+          </div>
+        </div>
+        <div class="ct-item rv d4">
+          <div class="ct-lbl zh">地址</div>
+          <div class="ct-lbl en">Address</div>
+          <div>
+            <div class="ct-val" style="font-size:.92rem;line-height:1.65">臺北市中山區<br>南京東路1段25號9樓之1</div>
+          </div>
+        </div>
+      </div>
+      <div class="ct-24 rv d5 zh">我們將於24小時內回覆</div>
+      <div class="ct-24 rv d5 en">We respond within 24 hours</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══════════════════════════════════════════════════ -->
+<footer>
+  <div>
+    <div class="ft-logo">TURCO</div>
+    <div class="ft-brand zh">亞興國際企業有限公司 旗下品牌</div>
+    <div class="ft-brand en">A brand of 亞興國際企業有限公司</div>
+  </div>
+  <div class="ft-copy">
+    <div class="zh">© 2026 亞興國際企業有限公司。保留所有權利。</div>
+    <div class="en">© 2026 亞興國際企業有限公司. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
+
+// Lang toggle
+const btns = document.querySelectorAll('.ltoggle button');
+const body = document.body;
+body.dataset.lang = localStorage.getItem('tl') || 'zh';
+btns.forEach(b => {
+  b.classList.toggle('on', b.dataset.l === body.dataset.lang);
+  b.addEventListener('click', () => {
+    body.dataset.lang = b.dataset.l;
+    localStorage.setItem('tl', b.dataset.l);
+    document.documentElement.lang = b.dataset.l === 'zh' ? 'zh-Hant' : 'en';
+    btns.forEach(x => x.classList.toggle('on', x.dataset.l === b.dataset.l));
+  });
+});
+
+// Scroll reveal
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target) } });
+}, {threshold:.1, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if(t){ e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 72, behavior:'smooth'}) }
+  });
+});
+</script>
+</body>
+</html>
