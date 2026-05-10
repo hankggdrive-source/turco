@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Ana Sayfa -->
+  <url>
+    <loc>https://turco.tw/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://turco.tw/"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://turco.tw/"/>
+  </url>
+
+  <!-- Kadayıf Landing Page -->
+  <url>
+    <loc>https://turco.tw/kadayif</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://turco.tw/kadayif"/>
+  </url>
+
+</urlset>
