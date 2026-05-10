@@ -14,11 +14,11 @@
 
   <!-- Kadayıf Landing Page -->
   <url>
-    <loc>https://turco.tw/kadayif</loc>
+    <loc>https://turco.tw/kadayif.html</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://turco.tw/kadayif"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://turco.tw/kadayif.html"/>
   </url>
 
 </urlset>
