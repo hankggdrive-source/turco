@@ -657,6 +657,10 @@ footer{
 .ft-link a{color:rgba(196,151,58,.6);transition:color .3s}
 .ft-link a:hover{color:var(--gold)}
 
+.why-top-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(196,151,58,.07)}
+.why-cards-stack{display:flex;flex-direction:column;gap:1px;background:rgba(196,151,58,.07)}
+.why-cards-stack .why-card{flex:1}
+
 /* ═══════════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════════ */
@@ -668,6 +672,8 @@ footer{
 @media(max-width:900px){
   #nav{padding:0 1.5rem}
   .sp{padding:4rem 2rem}
+  .why-top-grid{grid-template-columns:1fr}
+  .why-top-grid>div:first-child{min-height:260px!important}
   #hero{grid-template-columns:1fr;min-height:auto}
   .hero-left{padding:7rem 2rem 4rem}
   .hero-right{height:320px}
@@ -945,7 +951,7 @@ footer{
   <div class="cert-content">
     <div class="lbl rv">授權認證</div>
     <div class="cert-title rv d1">台灣唯一<br>授權經銷商</div>
-    <div class="cert-desc rv d2">TURCO（亞興國際企業有限公司）持有土耳其 ÖZKA KADAYIF GIDA 原廠正式授權，為台灣唯一合法卡達伊夫絲批發經銷商。授權書由 Mersin 原廠簽發，確保產品來源正宗可追溯。</div>
+    <div class="cert-desc rv d2">TURCO 持有土耳其 ÖZKA KADAYIF GIDA 原廠正式授權，為台灣唯一合法卡達伊夫絲批發經銷商。授權書由 Mersin 原廠簽發，確保產品來源正宗可追溯。</div>
     <div class="cert-list rv d3">
       <div class="cert-row"><div class="cert-dot"></div>製造商：ÖZKA KADAYIF GIDA İTH.İHR.SAN.TİC.LTD.ŞTİ</div>
       <div class="cert-row"><div class="cert-dot"></div>原廠地址：Mersin, Türkiye</div>
@@ -964,26 +970,26 @@ footer{
   </div>
 
   <!-- Top: image left + 3 stacked cards right -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(196,151,58,.07)">
-    <!-- Image — spans all 3 rows -->
-    <div style="background:#0e0e0e;overflow:hidden;position:relative;min-height:600px">
+  <div class="why-top-grid">
+    <!-- Image -->
+    <div style="background:#0e0e0e;overflow:hidden;position:relative;min-height:500px">
       <img src="https://raw.githubusercontent.com/hankggdrive-source/turco/main/IMG_5296.JPG"
            alt="ÖZKA 卡達伊夫絲 散裝款 已烘烤完成開袋即用 無油烘烤 台灣批發供應 TURCO" title="ÖZKA 卡達伊夫絲 已烘烤完成 — 開袋即用" width="900" height="1200" loading="lazy" decoding="async"
            style="width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:brightness(.95)">
     </div>
     <!-- Right: 3 stacked cards -->
-    <div style="display:flex;flex-direction:column;gap:1px;background:rgba(196,151,58,.07)">
-      <div class="why-card rv d1" style="flex:1">
+    <div class="why-cards-stack">
+      <div class="why-card rv d1">
         <div class="why-ghost">01</div>
         <div class="why-card-title">已烘烤完成，開袋即用</div>
         <div class="why-card-desc">ÖZKA 卡達伊夫絲出廠前已完成烘烤程序，無需再次入爐或炒製，開袋後可直接用於甜點、巧克力製作，大幅節省廚房作業時間與人力成本。</div>
       </div>
-      <div class="why-card rv d2" style="flex:1">
+      <div class="why-card rv d2">
         <div class="why-ghost">02</div>
         <div class="why-card-title">無油烘烤，無油脂異味</div>
         <div class="why-card-desc">採用無油乾烘工藝，不含額外添加油脂，無油耗味、無雜味。可直接與開心果醬、巧克力等食材結合，確保甜點風味純淨。</div>
       </div>
-      <div class="why-card rv d3" style="flex:1">
+      <div class="why-card rv d3">
         <div class="why-ghost">03</div>
         <div class="why-card-title">台灣唯一授權，現貨充足</div>
         <div class="why-card-desc">持有土耳其 ÖZKA 原廠正式授權，台灣唯一合法經銷商。與原廠直接合作穩定進口，市場缺貨時仍可穩定供應，且始終維持公道批發價格。</div>
